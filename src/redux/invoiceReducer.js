@@ -1,30 +1,33 @@
-// import data from "../data/data.json"
+export const FETCH_DATA = "FETCH_DATA"
+export const ADD_DOCUMENT = "ADD_INVOICE"
 
 export const invoiceReducer = (state = { documents: [] }, action) => {
 	switch (action.type) {
-		case "FETCH_DATA":
+		case FETCH_DATA:
 			return { ...state, documents: [...action.payload.documents] }
-		case "ADD_INVOICE":
-			const newInvoice = {
-				client: {
-					...action.payload.client,
-				},
-				paymentDate: action.payload.paymentDate,
-				createdAt: action.payload.createdAt,
-				type: action.payload.type,
-				id: action.payload.id,
-				items: [...action.payload.items],
-			}
 
-			// fetch("http://localhost:3000/documents", {
-			// 	method: "POST",
-			// 	headers: { "Content-Type": "application/json" },
-			// 	body: JSON.stringify(newInvoice),
-			// })
-
-			return { ...state, documents: [newInvoice, ...state.documents] }
+		case ADD_DOCUMENT:
+			return { ...state, documents: [action.payload.newDocument, ...state.documents] }
 
 		default:
 			return state
 	}
+}
+
+export const fetchData = () => dispatch => {
+	fetch("http://localhost:3000/documents?_sort=id&_order=desc")
+		.then(res => res.json())
+		.then(data => {
+			dispatch({ type: FETCH_DATA, payload: { documents: data } })
+		})
+}
+
+export const addDocument = newDocument => dispatch => {
+	fetch("http://localhost:3000/documents", {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify(newDocument),
+	}).then(() => {
+		dispatch({ type: ADD_DOCUMENT, payload: { newDocument: newDocument } })
+	})
 }

@@ -1,0 +1,85 @@
+{
+  "documents": [
+    {
+      "client": {
+        "clientName": "Sebastian Czapliński",
+        "clientAddress": "ul. Marszałkowska 16/28, 00-581 Warszawa",
+        "clientNip": "814-515-55-85"
+      },
+      "paymentDate": "23-04-2021",
+      "createdAt": "13-03-2021",
+      "type": "invoice",
+      "items": [
+        {
+          "itemName": "chipsy Lays",
+          "itemPrice": "19",
+          "itemQuantity": "3",
+          "itemUnits": "szt.",
+          "itemTax": "23%"
+        },
+        {
+          "itemName": "pomidory",
+          "itemPrice": "7",
+          "itemQuantity": "10",
+          "itemUnits": "szt.",
+          "itemTax": "5%"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "client": {
+        "clientName": "Juliusz Cezarowicz",
+        "clientAddress": "ul. Nerona 16, 02-324 Rzym",
+        "clientNip": "987-340-91-24"
+      },
+      "paymentDate": "02-05-2021",
+      "createdAt": "15-03-2021",
+      "type": "invoice",
+      "items": [
+        {
+          "itemName": "rózga",
+          "itemPrice": "15",
+          "itemQuantity": "1",
+          "itemUnits": "szt.",
+          "itemTax": "0%"
+        },
+        {
+          "itemName": "toga",
+          "itemPrice": "130",
+          "itemQuantity": "5",
+          "itemUnits": "szt.",
+          "itemTax": "8%"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "client": {
+        "clientName": "dsfgfd",
+        "clientAddress": "lkj;iohj",
+        "clientNip": "giugu"
+      },
+      "items": [
+        {
+          "itemName": "uihy",
+          "itemPrice": "098",
+          "itemQuantity": "67",
+          "itemUnits": "kjh",
+          "itemTax": "23%"
+        },
+        {
+          "itemName": "lkiojoipj",
+          "itemPrice": "89",
+          "itemQuantity": "6",
+          "itemUnits": "ty",
+          "itemTax": "8%"
+        }
+      ],
+      "paymentDate": "18.03.2021",
+      "createdAt": "18.03.2021",
+      "type": "invoice",
+      "id": 3
+    }
+  ]
+}

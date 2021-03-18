@@ -13,22 +13,14 @@ import DocumentDetails from "./components/DocumentDetails"
 import error404 from "./components/error404"
 import ScrollToTop from "./components/ScrollToTop"
 import bg from "./assets/bg.jpg"
+import { fetchData } from "./redux/invoiceReducer"
 
 function App() {
 	const dispatch = useDispatch()
+
 	useEffect(() => {
-		const fetchData = async () => {
-			const response = await fetch("http://localhost:3000/documents")
-			const data = await response.json()
-			dispatch({
-				type: "FETCH_DATA",
-				payload: {
-					documents: data,
-				},
-			})
-		}
-		fetchData()
-	}, [])
+		dispatch(fetchData())
+	}, [dispatch])
 
 	return (
 		<div>

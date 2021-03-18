@@ -9,6 +9,7 @@ import ConfirmItem from "./ConfirmItem"
 import InvoiceDatePicker from "./InvoiceDatePicker"
 import ConfirmDocument from "./ConfirmDocument"
 import DocumentType from "./DocumentType"
+import { addDocument } from "../../redux/invoiceReducer"
 
 const CreateInvoice = () => {
 	class InvoiceItem {
@@ -62,17 +63,16 @@ const CreateInvoice = () => {
 
 		e.preventDefault()
 		if (invoiceItems.length && clientData) {
-			dispatch({
-				type: "ADD_INVOICE",
-				payload: {
+			dispatch(
+				addDocument({
 					client: client,
 					items: invoiceItems,
 					paymentDate: paymentDate.toLocaleDateString(),
 					createdAt: new Date().toLocaleDateString(),
 					type: docType,
 					id: documentsLength,
-				},
-			})
+				})
+			)
 			setClientWarning(false)
 			setInvoiceWarning(false)
 			setItemWarning(false)
