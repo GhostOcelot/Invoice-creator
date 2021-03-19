@@ -29,40 +29,61 @@ const FilterAndSorting = () => {
 
 	return (
 		<>
-			<div className="d-flex">
-				<h6 className="w-50">Sortuj przez datę utworzenia:</h6>
-				<h6 className="w-50">Filtruj:</h6>
-			</div>
-			<div className="d-flex mb-4">
-				<div className="d-flex w-50">
-					<Button onClick={() => sort("descending")} variant="info btn-sm" className="mr-2" href="">
-						Od najnowszych
-					</Button>
-					<Button onClick={() => sort("ascending")} variant="info btn-sm" href="">
-						Od najstarszych
-					</Button>
+			<div className="menu-container d-flex mb-4">
+				<div className="sort-container d-flex w-100">
+					<div>
+						<h6>Sortuj po dacie utworzenia:</h6>
+					</div>
+					<div>
+						<Button
+							onClick={() => sort("descending")}
+							variant="info btn-sm"
+							className="mr-2 mb-2"
+							href=""
+						>
+							Od najnowszych
+						</Button>
+						<Button
+							onClick={() => sort("ascending")}
+							variant="info btn-sm"
+							className="mb-2"
+							href=""
+						>
+							Od najstarszych
+						</Button>
+					</div>
 				</div>
 
-				<div className="d-flex w-50">
-					<Button onClick={fetch} variant="info btn-sm" className="mr-2" href="">
-						Wszystkie
-					</Button>
+				<div className="filter-container d-flex w-100">
+					<div>
+						<h6 className="w-50">Filtruj:</h6>
+					</div>
+					<div>
+						<Button onClick={fetch} variant="info btn-sm" className="mr-2 mb-2" href="">
+							Wszystkie
+						</Button>
 
-					<Button onClick={() => filter("invoice")} variant="info btn-sm" className="mr-2" href="">
-						Faktury
-					</Button>
+						<Button
+							onClick={() => filter("invoice")}
+							variant="info btn-sm"
+							className="mr-2 mb-2"
+							href=""
+						>
+							Faktury
+						</Button>
 
-					<Button
-						onClick={() => filter("prepayment-invoice")}
-						variant="info btn-sm"
-						className="mr-2"
-						href=""
-					>
-						Faktury zaliczkowe
-					</Button>
-					<Button onClick={() => filter("receipt")} variant="info btn-sm" href="">
-						Paragony
-					</Button>
+						<Button
+							onClick={() => filter("prepayment-invoice")}
+							variant="info btn-sm"
+							className="mr-2 mb-2"
+							href=""
+						>
+							Faktury zaliczkowe
+						</Button>
+						<Button onClick={() => filter("receipt")} variant="info btn-sm mb-2" href="">
+							Paragony
+						</Button>
+					</div>
 				</div>
 			</div>
 			<hr />

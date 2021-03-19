@@ -8,8 +8,6 @@ const AllDocuments = () => {
 
 	return (
 		<>
-			<h2 className="mb-3">Wszystkie Dokumenty:</h2>
-
 			{documents.map((document, index) => {
 				const docType = () => {
 					switch (document.type) {
