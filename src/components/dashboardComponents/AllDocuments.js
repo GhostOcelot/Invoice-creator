@@ -16,7 +16,7 @@ const AllDocuments = () => {
 						case "invoice":
 							return "Faktura"
 						case "prepayment-invoice":
-							return "Faktura przedpłacowa"
+							return "Faktura zaliczkowa"
 						case "receipt":
 							return "Paragon"
 						default:

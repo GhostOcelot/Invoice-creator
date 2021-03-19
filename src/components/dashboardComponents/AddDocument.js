@@ -1,16 +1,24 @@
 import React from "react"
+import { useDispatch } from "react-redux"
 import { Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import { fetchData } from "../../redux/invoiceReducer"
 
 const AddDocument = () => {
+	const dispatch = useDispatch()
+
+	const handleClick = () => {
+		dispatch(fetchData())
+	}
+
 	return (
 		<>
-			<h5 className="mt-4 text-center">Stwórz nowy dokument:</h5>
+			<h6 className="mt-4 text-left">Stwórz nowy dokument:</h6>
 
-			<div className="input-group mb-3 d-flex justify-content-center">
+			<div className="input-group mb-4 d-flex justify-content-left">
 				<div className="input-group-append">
 					<Link to={`/create-document`}>
-						<Button variant="info">
+						<Button onClick={handleClick} variant="info w-100 btn-sm">
 							<p className="text-left text-light m-0">Utwórz</p>
 						</Button>
 					</Link>

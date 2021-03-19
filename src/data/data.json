@@ -1,0 +1,152 @@
+{
+	"documents": [
+		{
+			"client": {
+				"clientName": "Sebastian Czapliński",
+				"clientAddress": "ul. Marszałkowska 16/28, 00-581 Warszawa",
+				"clientNip": "814-515-55-85"
+			},
+			"paymentDate": "23.04.2021",
+			"createdAt": "13.03.2021",
+			"type": "invoice",
+			"items": [
+				{
+					"itemName": "usługi budowlane",
+					"itemPrice": "50",
+					"itemQuantity": "20",
+					"itemUnits": "h",
+					"itemTax": "23%"
+				},
+				{
+					"itemName": "doradztwo",
+					"itemPrice": "400",
+					"itemQuantity": "1",
+					"itemUnits": "szt.",
+					"itemTax": "5%"
+				}
+			],
+			"id": 1
+		},
+		{
+			"client": {
+				"clientName": "Juliusz Czaszyński",
+				"clientAddress": "ul. Słowackiego 16, 82-324 Toruń",
+				"clientNip": "987-340-91-24"
+			},
+			"paymentDate": "02.05.2021",
+			"createdAt": "15.03.2021",
+			"type": "prepayment-invoice",
+			"items": [
+				{
+					"itemName": "pomidory",
+					"itemPrice": "5",
+					"itemQuantity": "50",
+					"itemUnits": "szt.",
+					"itemTax": "0%"
+				},
+				{
+					"itemName": "papryka",
+					"itemPrice": "4.50",
+					"itemQuantity": "30",
+					"itemUnits": "szt.",
+					"itemTax": "8%"
+				}
+			],
+			"id": 2
+		},
+		{
+			"client": {
+				"clientName": "Magdalena Ciszewska",
+				"clientAddress": "ul. Grzegorzewskiej 4/56, 03-528 Warszawa",
+				"clientNip": "565-789-29-01"
+			},
+			"items": [
+				{
+					"itemName": "rękawice zimowe",
+					"itemPrice": "120",
+					"itemQuantity": "3",
+					"itemUnits": "szt.",
+					"itemTax": "23%"
+				}
+			],
+			"paymentDate": "18.03.2021",
+			"createdAt": "18.03.2021",
+			"type": "receipt",
+			"id": 3
+		},
+		{
+			"client": {
+				"clientName": "Paweł Nowak",
+				"clientAddress": "ul. Szwoleżerów 99, 45-626 Tykocin",
+				"clientNip": "254-835-31-90"
+			},
+			"items": [
+				{
+					"itemName": "mleko",
+					"itemPrice": "3.29",
+					"itemQuantity": "10",
+					"itemUnits": "szt.",
+					"itemTax": "8%"
+				},
+				{
+					"itemName": "makaron",
+					"itemPrice": "4.50",
+					"itemQuantity": "25",
+					"itemUnits": "kg",
+					"itemTax": "5%"
+				},
+				{
+					"itemName": "pomidory",
+					"itemPrice": "6",
+					"itemQuantity": "5",
+					"itemUnits": "kg",
+					"itemTax": "8%"
+				}
+			],
+			"paymentDate": "1.04.2021",
+			"createdAt": "19.03.2021",
+			"type": "receipt",
+			"id": 4
+		},
+		{
+			"client": {
+				"clientName": "Dorota Czubaszko",
+				"clientAddress": "ul. Piękna 23/7, 36-887 Suwałki",
+				"clientNip": "256-532-73-68"
+			},
+			"items": [
+				{
+					"itemName": "karma dla kotów",
+					"itemPrice": "8.20",
+					"itemQuantity": "3",
+					"itemUnits": "kg",
+					"itemTax": "23%"
+				}
+			],
+			"paymentDate": "16.04.2021",
+			"createdAt": "19.03.2021",
+			"type": "invoice",
+			"id": 5
+		},
+		{
+			"client": {
+				"clientName": "Jan Borkowski",
+				"clientAddress": "ul. Orzechowa 36, 38-696 Wrocław",
+				"clientNip": "647-908-47-09"
+			},
+			"items": [
+				{
+					"itemName": "akcesoria elektroniczne",
+					"itemPrice": "9.40",
+					"itemQuantity": "160",
+					"itemUnits": "szt.",
+					"itemTax": "23%"
+				}
+			],
+			"paymentDate": "1.04.2021",
+			"createdAt": "19.03.2021",
+			"type": "prepayment-invoice",
+			"id": 6
+		}
+	]
+}

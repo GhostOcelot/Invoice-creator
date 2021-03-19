@@ -98,7 +98,7 @@ const CreateInvoice = () => {
 			<form onSubmit={handleSubmit} className="container-fluid" style={{ maxWidth: "600px" }}>
 				<DocumentType setDocType={setDocType} />
 				<ClientData clientWarning={clientWarning} handleClientChange={handleClientChange} />
-				<ItemsTable invoiceItems={invoiceItems} />
+				<ItemsTable invoiceItems={invoiceItems} setInvoiceItems={setInvoiceItems} />
 				<ConfirmItem
 					addItem={addItem}
 					handleItemChange={handleItemChange}

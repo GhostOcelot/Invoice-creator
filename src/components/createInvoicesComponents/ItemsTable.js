@@ -1,6 +1,11 @@
 import React from "react"
+import { Button } from "react-bootstrap"
 
-const ItemsTable = ({ invoiceItems }) => {
+const ItemsTable = ({ invoiceItems, setInvoiceItems }) => {
+	const handleClick = id => {
+		setInvoiceItems(invoiceItems.filter((item, index) => index !== id))
+	}
+
 	return (
 		<>
 			{invoiceItems.length > 0 && (
@@ -14,6 +19,7 @@ const ItemsTable = ({ invoiceItems }) => {
 								<th scope="col">Ilość</th>
 								<th scope="col">Jednostki</th>
 								<th scope="col">VAT</th>
+								<th scope="col"></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -26,6 +32,11 @@ const ItemsTable = ({ invoiceItems }) => {
 											<td>{item.itemQuantity}</td>
 											<td>{item.itemUnits}</td>
 											<td>{item.itemTax}</td>
+											<td className="text-right">
+												<Button onClick={() => handleClick(index)} className="btn-sm btn-info">
+													Delete
+												</Button>
+											</td>
 										</tr>
 									</React.Fragment>
 								)
